@@ -10,6 +10,26 @@ Kod bazowy programu Commit4_0:
 import java.io.IOException;
 import java.util.Scanner;
 
+public class Student {
+    private String imie;
+    private int wiek;
+
+    public Student(String imie, int wiek) {
+        this.imie = imie;
+        this.wiek = wiek;
+    }
+
+    public String ToString() {
+        return imie + ";" + wiek;
+    }
+
+    public static Student Parse(String str) {
+        String[] data = str.split(";");
+        if(data.length != 2) return null;
+        return new Student(data[0], Integer.parseInt(data[1]));
+    }
+}
+
 class Main {
 
   public static void main(String[] args) {
