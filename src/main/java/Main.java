@@ -2,7 +2,7 @@
 import java.io.IOException;
 import java.util.Scanner;
 
-class main {
+public class Main {
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     Service s = new Service();
@@ -20,7 +20,6 @@ class main {
         break;
 
       try {
-
         switch (wybor) {
           case 1:
             System.out.print("Podaj imię nowego studenta: ");
@@ -38,11 +37,10 @@ class main {
               System.out.println(current.ToString());
             }
             break;
-
-
         }
       } catch (IOException e) {
         System.out.println("Błąd podczas operacji na pliku!");
+        e.printStackTrace();
       }
     }
   }
