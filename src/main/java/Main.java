@@ -1,8 +1,9 @@
 
+
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Main {
+class main {
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     Service s = new Service();
@@ -20,9 +21,10 @@ public class Main {
         break;
 
       try {
+
         switch (wybor) {
           case 1:
-            System.out.print("Podaj imię nowego studenta: ");
+            System.out.print("Podaj imię nowego tt: ");
             String imie = sc.nextLine();
             System.out.print("Podaj wiek nowego studenta: ");
             int wiek = sc.nextInt();
@@ -37,10 +39,12 @@ public class Main {
               System.out.println(current.ToString());
             }
             break;
+
+          default:
+            System.out.println("Nieprawidłowa opcja!");
         }
       } catch (IOException e) {
         System.out.println("Błąd podczas operacji na pliku!");
-        e.printStackTrace();
       }
     }
   }
