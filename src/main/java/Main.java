@@ -10,7 +10,7 @@ Kod bazowy programu Commit4_0:
 import java.io.IOException;
 import java.util.Scanner;
 
-class Main {
+class main {
 
   public static void main(String[] args) {
 
