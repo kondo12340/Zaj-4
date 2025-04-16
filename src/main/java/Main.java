@@ -30,7 +30,7 @@ public class Main {
             System.out.print("Podaj nazwisko nowego studenta: ");
             String nazwisko = sc.nextLine();
            
-            Student nowystudent = new Student(imie, wiek);
+            Student nowystudent = new Student(imie, nazwisko, wiek);
             s.addStudent(nowystudent);
             break;
 
