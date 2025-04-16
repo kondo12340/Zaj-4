@@ -3,7 +3,7 @@
 import java.io.IOException;
 import java.util.Scanner;
 
-class main {
+class Main {
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     Service s = new Service();
@@ -24,7 +24,7 @@ class main {
 
         switch (wybor) {
           case 1:
-            System.out.print("Podaj imię nowego tt: ");
+            System.out.print("Podaj imię nowego studenta: ");
             String imie = sc.nextLine();
             System.out.print("Podaj wiek nowego studenta: ");
             int wiek = sc.nextInt();
