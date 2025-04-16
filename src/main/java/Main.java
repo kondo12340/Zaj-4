@@ -1,9 +1,8 @@
 
-
 import java.io.IOException;
 import java.util.Scanner;
 
-class Main {
+public class Main {
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     Service s = new Service();
@@ -21,19 +20,17 @@ class Main {
         break;
 
       try {
-
         switch (wybor) {
           case 1:
             System.out.print("Podaj imię nowego studenta: ");
-            sc.nextLine();
             String imie = sc.nextLine();
             System.out.print("Podaj wiek nowego studenta: ");
             int wiek = sc.nextInt();
             sc.nextLine();
             System.out.print("Podaj nazwisko nowego studenta: ");
-            String nazwisko = sc.nextInt();
+            String nazwisko = sc.nextLine();
            
-            Student nowystudent = new Student(imie, wiek,nazwisko);
+            Student nowystudent = new Student(imie, wiek);
             s.addStudent(nowystudent);
             break;
 
@@ -43,15 +40,11 @@ class Main {
             for (Student current : students) {
               System.out.println(current.ToString());
             }
-        } catch (IOException e) {
-      }
-      break;
-      
-
-
+            break;
         }
       } catch (IOException e) {
         System.out.println("Błąd podczas operacji na pliku!");
+        e.printStackTrace();
       }
     }
   }
