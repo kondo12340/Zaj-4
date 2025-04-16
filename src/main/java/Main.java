@@ -25,10 +25,15 @@ class Main {
         switch (wybor) {
           case 1:
             System.out.print("Podaj imię nowego studenta: ");
+            sc.nextLine();
             String imie = sc.nextLine();
             System.out.print("Podaj wiek nowego studenta: ");
             int wiek = sc.nextInt();
-            Student nowystudent = new Student(imie, wiek);
+            sc.nextLine();
+            System.out.print("Podaj nazwisko nowego studenta: ");
+            String nazwisko = sc.nextInt();
+           
+            Student nowystudent = new Student(imie, wiek,nazwisko);
             s.addStudent(nowystudent);
             break;
 
@@ -38,10 +43,12 @@ class Main {
             for (Student current : students) {
               System.out.println(current.ToString());
             }
-            break;
+        } catch (IOException e) {
+      }
+      break;
+      
 
-          default:
-            System.out.println("Nieprawidłowa opcja!");
+
         }
       } catch (IOException e) {
         System.out.println("Błąd podczas operacji na pliku!");
