@@ -1,39 +1,49 @@
-/*
-Kod bazowy programu Commit4_0: 
-• Program dodaje do prostej bazy danych (pliku db.txt) dane odnośnie Studentów.
-• Studenci dodawani są w klasie Main.
-• Wszyscy studenci są wypisywani na końcu klasy Main.
-• Klasa Service obsługuje odczyt i zapis do pliku bazy danych.
-• Klasa Student reprezentuje pojedynczego studenta (Imię, Wiek).
-*/
 
 import java.io.IOException;
 import java.util.Scanner;
 
 class main {
-
   public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    Service s = new Service();
 
-    System.out.print("Podaj imię nowego studenta: ");
-    Scanner sc=new Scanner(System.in);
-    String imie=sc.nextLine();
-    System.out.print("Podaj wiek nowego studenta: ");
-    int wiek=sc.nextInt();
+    while (true) {
+      System.out.println("\n1. Dodaj nowego studenta");
+      System.out.println("2. Wyświetl wszystkich studentów");
+      System.out.println("0. Wyjście");
+      System.out.print("Wybierz opcję: ");
 
-    Student nowystudent = new Student(imie, wiek);
+      int wybor = sc.nextInt();
+      sc.nextLine();
+
+      if (wybor == 0)
+        break;
+
+      try {
+
+        switch (wybor) {
+          case 1:
+            System.out.print("Podaj imię nowego studenta: ");
+            String imie = sc.nextLine();
+            System.out.print("Podaj wiek nowego studenta: ");
+            int wiek = sc.nextInt();
+            Student nowystudent = new Student(imie, wiek);
+            s.addStudent(nowystudent);
+            break;
+
+          case 2:
+            var students = s.getStudents();
+            System.out.println("\nLista studentów:");
+            for (Student current : students) {
+              System.out.println(current.ToString());
+            }
+            break;
 
 
-    try {
-      Service s = new Service();
-
-    s.addStudent(nowystudent);
-
-      var students = s.getStudents();
-      for(Student current : students) {
-        System.out.println(current.ToString());
+        }
+      } catch (IOException e) {
+        System.out.println("Błąd podczas operacji na pliku!");
       }
-    } catch (IOException e) {
-
     }
   }
 }
