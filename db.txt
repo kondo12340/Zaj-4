@@ -2,3 +2,5 @@ Krzysztof 20
 Janusz 40
 bartek 33
 f 4
+elo 13
+kuba 12

@@ -43,7 +43,7 @@ public class Main {
             break;
         }
       } catch (IOException e) {
-        System.out.println("Błąd podczas operacji na pliku!");
+ 
         e.printStackTrace();
       }
     }
