@@ -1,3 +1,13 @@
-Arek;Piec;22;2003-04-16
-Radek;Kaktus;24;1998-05-22
 Wojtek; Rura; 24; 1998-08-23
+Wojtek; Rusek; 23; 2000-11-29
+Arek; Jabko; 22; 1998-09-06
+Arek; Jabko; 22; 1998-09-06
+Magda; Nowak; 20; 2003-04-15
+Tomasz; Kowalski; 24; 2000-12-01
+Anna; Wiśniewska; 19; 2005-06-30
+Patryk; Zieliński; 21; 2002-03-11
+Karolina; Dąbrowska; 23; 2001-08-22
+Michał; Wójcik; 25; 1999-10-05
+Julia; Kamińska; 22; 2003-01-17
+Kacper; Lewandowski; 20; 2004-07-09
+Natalia; Mazur; 21; 2003-02-28

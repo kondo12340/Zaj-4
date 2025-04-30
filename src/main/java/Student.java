@@ -11,13 +11,17 @@ public class Student {
         this.dataUrodzenia = dataUrodzenia;
     }
 
+    public String getImie() {
+        return imie;
+    }
+
     public String ToString() {
-       
+        
         return imie + "; " + nazwisko + "; " + wiek + "; " + dataUrodzenia;
     }
 
     public static Student Parse(String line) {
-        String[] parts = line.split(";");
+        String[] parts = line.split("; ");
         if (parts.length != 4) {
             throw new IllegalArgumentException("Nieprawidłowa linia: " + line);
         }

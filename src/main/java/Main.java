@@ -4,16 +4,17 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Service s = new Service();  
+        Service s = new Service();
 
         while (true) {
             System.out.println("\n1. Dodaj nowego studenta");
             System.out.println("2. Wyświetl wszystkich studentów");
+            System.out.println("3. Znajdź studenta po fragmencie imienia");
             System.out.println("0. Wyjście");
             System.out.print("Wybierz opcję: ");
 
             int wybor = sc.nextInt();
-            sc.nextLine(); 
+            sc.nextLine();
 
             if (wybor == 0)
                 break;
@@ -32,7 +33,6 @@ public class Main {
 
                         int rok, miesiac, dzien;
 
-                        
                         while (true) {
                             System.out.print("Podaj rok urodzenia (1-3000): ");
                             rok = sc.nextInt();
@@ -40,7 +40,6 @@ public class Main {
                             System.out.println("Nieprawidłowy rok. Spróbuj ponownie.");
                         }
 
-                        
                         while (true) {
                             System.out.print("Podaj miesiąc urodzenia (1-12): ");
                             miesiac = sc.nextInt();
@@ -48,7 +47,6 @@ public class Main {
                             System.out.println("Nieprawidłowy miesiąc. Spróbuj ponownie.");
                         }
 
-                        
                         while (true) {
                             System.out.print("Podaj dzień urodzenia (1-31): ");
                             dzien = sc.nextInt();
@@ -56,7 +54,7 @@ public class Main {
                             System.out.println("Nieprawidłowy dzień. Spróbuj ponownie.");
                         }
 
-                        sc.nextLine(); 
+                        sc.nextLine();
 
                         String dataUrodzenia = String.format("%04d-%02d-%02d", rok, miesiac, dzien);
 
@@ -72,11 +70,20 @@ public class Main {
                         }
                         break;
 
+                    case 3:
+                        System.out.print("Podaj fragment imienia do wyszukania: ");
+                        String szukany = sc.nextLine();
+                        Student znaleziony = s.findStudentByName(szukany);
+                        if (znaleziony != null) {
+                            System.out.println("Znaleziono: " + znaleziony.ToString());
+                        } else {
+                            System.out.println("Nie znaleziono studenta z takim imieniem.");
+                        }
+                        break;
+
                     default:
                         System.out.println("Nieznana opcja.");
                         break;
-
-                    
                 }
             } catch (IOException e) {
                 e.printStackTrace();
