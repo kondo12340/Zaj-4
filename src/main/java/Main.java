@@ -10,6 +10,7 @@ public class Main {
             System.out.println("\n1. Dodaj nowego studenta");
             System.out.println("2. Wyświetl wszystkich studentów");
             System.out.println("3. Znajdź studenta po fragmencie imienia");
+            System.out.println("4. Usuń studenta po imieniu i nazwisku");
             System.out.println("0. Wyjście");
             System.out.print("Wybierz opcję: ");
 
@@ -78,6 +79,21 @@ public class Main {
                             System.out.println("Znaleziono: " + znaleziony.ToString());
                         } else {
                             System.out.println("Nie znaleziono studenta z takim imieniem.");
+                        }
+                        break;
+
+                    case 4:
+                        System.out.print("Podaj imię studenta do usunięcia: ");
+                        String delImie = sc.nextLine();
+
+                        System.out.print("Podaj nazwisko studenta do usunięcia: ");
+                        String delNazwisko = sc.nextLine();
+
+                        boolean usunieto = s.removeStudentByNameSurname(delImie, delNazwisko);
+                        if (usunieto) {
+                            System.out.println("Student został usunięty.");
+                        } else {
+                            System.out.println("Nie znaleziono studenta o podanym imieniu i nazwisku.");
                         }
                         break;
 

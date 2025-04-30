@@ -15,8 +15,11 @@ public class Student {
         return imie;
     }
 
+    public String getNazwisko() {
+        return nazwisko;
+    }
+
     public String ToString() {
-        
         return imie + "; " + nazwisko + "; " + wiek + "; " + dataUrodzenia;
     }
 
