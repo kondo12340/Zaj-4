@@ -1,2 +1,3 @@
-
-Kuba Ciul 54
+Arek;Piec;22;2003-04-16
+Radek;Kaktus;24;1998-05-22
+Wojtek; Rura; 24; 1998-08-23
